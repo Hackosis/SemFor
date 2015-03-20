@@ -31,22 +31,40 @@ public class VirusTotalParser {
        }
     }
     
-    private FileScanReport getFileScanReport(String resource){
-        FileScanReport report = null;
+    private FileScanReport[] getFileScanReports(String[] files){
+        FileScanReport[] report = null;
         try{
-           report = virusTotalRef.getScanReport(resource);
+           report = virusTotalRef.getScanReports(files);
         } catch (IOException ex){
             System.err.println("I/O Error: " + ex.getMessage());
         } catch (UnauthorizedAccessException ex){
             System.err.println("Unauthorized Access: " + ex.getMessage());
         } catch (QuotaExceededException ex){
             System.err.println("Quota Exceeded. Try again later: " + ex.getMessage());
+        } catch (Exception ex){
+            System.err.println("Generic Exception: " + ex.getMessage());
         }
         return report;
     }
     
-    public void printFileScanReport(String resource){
-        FileScanReport report = getFileScanReport(resource);
+    private FileScanReport[] getUrlScanReports(String[] urls){
+        FileScanReport[] reports = null;
+        try{
+            // Don't ask for VirusTotal to scan previously unknown URLs
+            reports = virusTotalRef.getUrlScanReport(urls, false);
+        } catch (IOException ex){
+            System.err.println("I/O Error: " + ex.getMessage());
+        } catch (UnauthorizedAccessException ex){
+            System.err.println("Unauthorized Access: " + ex.getMessage());
+        } catch (QuotaExceededException ex){
+            System.err.println("Quota Exceeded. Try again later: " + ex.getMessage());
+        } catch (Exception ex){
+            System.err.println("Generic Exception: " + ex.getMessage());
+        }
+        return reports;
+    }
+    
+    private void printScanReport(FileScanReport report){
         if (report != null){
             System.out.println("MD5 :\t" + report.getMd5());
             System.out.println("Perma link :\t" + report.getPermalink());
@@ -67,6 +85,20 @@ public class VirusTotalParser {
                 System.out.println("\t\t Resut : " + virusInfo.getResult());
                 System.out.println("\t\t Update : " + virusInfo.getUpdate());
                 System.out.println("\t\t Version :" + virusInfo.getVersion());
+            }
+        }
+    }
+    
+    public void printScanReports(String[] resources,String type){
+        FileScanReport[] reports = null;
+        if (type.equals("URL")){
+            reports = getUrlScanReports(resources);
+        } else if (type.equals("FILE")) {
+            reports = getFileScanReports(resources);
+        }
+        if (reports != null){
+                for (FileScanReport report: reports){
+                    printScanReport(report);
             }
         }
     }
