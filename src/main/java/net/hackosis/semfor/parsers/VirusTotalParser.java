@@ -107,7 +107,7 @@ public class VirusTotalParser {
             for (String key : scans.keySet()) {
                 VirusScanInfo virusInfo = scans.get(key);
                 System.out.println("Scanner : " + key);
-                System.out.println("\t\t Resut : " + virusInfo.getResult());
+                System.out.println("\t\t Result : " + virusInfo.getResult());
                 System.out.println("\t\t Update : " + virusInfo.getUpdate());
                 System.out.println("\t\t Version :" + virusInfo.getVersion());
             }
