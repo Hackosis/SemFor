@@ -1,3 +1,6 @@
 /target/
 /nbactions.xml
 /bin/
+/.settings/
+/.classpath
+/.project
