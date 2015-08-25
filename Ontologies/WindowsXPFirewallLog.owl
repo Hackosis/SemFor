@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl"
+     xmlns:IntegrationOntology="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#before -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#before"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDestinationHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDestinationHost">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDestinationPort -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDestinationPort">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasLogEntry -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasLogEntry">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogContainer"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasProtocol">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasSourceHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasSourceHost">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasSourcePort -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasSourcePort">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isContainedIn">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasLogEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isGeneratedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isGeneratedFrom">
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Application"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#isRepresentedBy">
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogEntry"/>
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#represents"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#represents -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#represents">
+        <rdfs:range rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+        <rdfs:domain rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogEntry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAddress">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasDateTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasVersion">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Application -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Application"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#CloseSessionEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#CloseSessionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLOSE</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#DropDataEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#DropDataEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DROP</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogContainer -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogContainer"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogEntry -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallLogEntry"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#OpenInboundSessionEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#OpenInboundSessionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPEN-INBOUND</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#OpenOutboundSessionEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#OpenOutboundSessionEvent">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPEN</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Port -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Port"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#ICMP -->
+
+    <owl:NamedIndividual rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#ICMP">
+        <rdf:type rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICMP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#TCP -->
+
+    <owl:NamedIndividual rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#TCP">
+        <rdf:type rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCP</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#UDP -->
+
+    <owl:NamedIndividual rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#UDP">
+        <rdf:type rdf:resource="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Protocol"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UDP</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
