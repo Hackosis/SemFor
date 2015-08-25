@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY VirusTotal "http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:VirusTotal="http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#generatedBy -->
+
+    <owl:ObjectProperty rdf:about="&VirusTotal;generatedBy">
+        <rdfs:range rdf:resource="&VirusTotal;AntivirusEngine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasAVReport -->
+
+    <owl:ObjectProperty rdf:about="&VirusTotal;hasAVReport">
+        <rdfs:range rdf:resource="&VirusTotal;AntivirusReport"/>
+        <rdfs:domain rdf:resource="&VirusTotal;File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasResult -->
+
+    <owl:ObjectProperty rdf:about="&VirusTotal;hasResult">
+        <rdfs:domain rdf:resource="&VirusTotal;AntivirusReport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasAVName -->
+
+    <owl:DatatypeProperty rdf:about="&VirusTotal;hasAVName"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="&VirusTotal;hasDate">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasMD5Hash -->
+
+    <owl:DatatypeProperty rdf:about="&VirusTotal;hasMD5Hash"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasPermanentLink -->
+
+    <owl:DatatypeProperty rdf:about="&VirusTotal;hasPermanentLink"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#hasResultDescription -->
+
+    <owl:DatatypeProperty rdf:about="&VirusTotal;hasResultDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#AntivirusEngine -->
+
+    <owl:Class rdf:about="&VirusTotal;AntivirusEngine"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#AntivirusReport -->
+
+    <owl:Class rdf:about="&VirusTotal;AntivirusReport"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#File -->
+
+    <owl:Class rdf:about="&VirusTotal;File"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#AVG -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;AVG">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">AVG</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#AhnLab-V3 -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;AhnLab-V3">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">AhnLab-V3</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#AntiVir -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;AntiVir">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">AntiVir</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Antiy-AVL -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Antiy-AVL">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Antiy-AVL</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Avast -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Avast">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Avast</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#BitDefender -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;BitDefender">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">BitDefender</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#ByteHero -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;ByteHero">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">ByteHero</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#CAT-QuickHeal -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;CAT-QuickHeal">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">CAT-QuickHeal</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#ClamAV -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;ClamAV">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">ClamAV</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Commtouch -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Commtouch">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Commtouch</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Comodo -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Comodo">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Comodo</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#DrWeb -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;DrWeb">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">DrWeb</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Emsisoft -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Emsisoft">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Emsisoft</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#F-Prot -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;F-Prot">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">F-Prot</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#F-Secure -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;F-Secure">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">F-Secure</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Fortinet -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Fortinet">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Fortinet</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#GData -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;GData">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">GData</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Ikarus -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Ikarus">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Ikarus</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Jiangmin -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Jiangmin">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Jiangmin</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#K7AntiVirus -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;K7AntiVirus">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">K7AntiVirus</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Kaspersky -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Kaspersky">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Kaspersky</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#McAfee -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;McAfee">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">McAfee
+</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#McAfee-GW-Edition -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;McAfee-GW-Edition">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">McAfee-GW-Edition</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Microsoft -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Microsoft">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Microsoft</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#NOD32 -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;NOD32">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">NOD32</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Norman -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Norman">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Norman</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#PCTools -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;PCTools">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">PCTools</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Panda -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Panda">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Panda</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Prevx -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Prevx">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Prevx</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Rising -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Rising">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Rising</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#SUPERAntiSpyware -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;SUPERAntiSpyware">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">SUPERAntiSpyware</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Sophos -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Sophos">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Sophos</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#Symantec -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;Symantec">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">Symantec</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#TheHacker -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;TheHacker">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">TheHacker</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#TrendMicro -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;TrendMicro">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">TrendMicro</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#TrendMicro-HouseCall -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;TrendMicro-HouseCall">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">TrendMicro-HouseCall</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#VBA32 -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;VBA32">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">VBA32</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#VIPRE -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;VIPRE">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">VIPRE</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#ViRobot -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;ViRobot">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">ViRobot</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#VirusBuster -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;VirusBuster">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">VirusBuster</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#eSafe -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;eSafe">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">eSafe</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#eTrust-Vet -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;eTrust-Vet">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">eTrust-Vet</hasAVName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/VirusTotal.owl#nProtect -->
+
+    <owl:NamedIndividual rdf:about="&VirusTotal;nProtect">
+        <rdf:type rdf:resource="&VirusTotal;AntivirusEngine"/>
+        <hasAVName rdf:datatype="&xsd;string">nProtect</hasAVName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
