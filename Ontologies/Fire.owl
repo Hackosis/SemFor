@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Fire "http://people.dsv.su.se/~dossis/ontologies/Fire.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/Fire.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/Fire.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Fire="http://people.dsv.su.se/~dossis/ontologies/Fire.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/Fire.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#IPbelongsToHost -->
+
+    <owl:ObjectProperty rdf:about="&Fire;IPbelongsToHost">
+        <rdfs:range rdf:resource="&Fire;Host"/>
+        <rdfs:domain rdf:resource="&Fire;IPAddress"/>
+        <owl:inverseOf rdf:resource="&Fire;hasIPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#containsHost -->
+
+    <owl:ObjectProperty rdf:about="&Fire;containsHost">
+        <rdfs:domain rdf:resource="&Fire;AS"/>
+        <rdfs:range rdf:resource="&Fire;Host"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#hasIPAddress -->
+
+    <owl:ObjectProperty rdf:about="&Fire;hasIPAddress">
+        <rdfs:domain rdf:resource="&Fire;Host"/>
+        <rdfs:range rdf:resource="&Fire;IPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#isContainedInAS -->
+
+    <owl:ObjectProperty rdf:about="&Fire;isContainedInAS">
+        <rdfs:range rdf:resource="&Fire;AS"/>
+        <rdfs:domain rdf:resource="&Fire;Host"/>
+        <owl:inverseOf rdf:resource="&Fire;containsHost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="&Fire;locatedIn">
+        <rdfs:range rdf:resource="&Fire;Country"/>
+        <rdfs:domain rdf:resource="&Fire;Host"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#hasASName -->
+
+    <owl:DatatypeProperty rdf:about="&Fire;hasASName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#hasASNumber -->
+
+    <owl:DatatypeProperty rdf:about="&Fire;hasASNumber">
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#hasCountryName -->
+
+    <owl:DatatypeProperty rdf:about="&Fire;hasCountryName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#hasIPAddressString -->
+
+    <owl:DatatypeProperty rdf:about="&Fire;hasIPAddressString">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#AS -->
+
+    <owl:Class rdf:about="&Fire;AS"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#CCServer -->
+
+    <owl:Class rdf:about="&Fire;CCServer">
+        <rdfs:subClassOf rdf:resource="&Fire;MaliciousHost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#Country -->
+
+    <owl:Class rdf:about="&Fire;Country"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#ExploitServer -->
+
+    <owl:Class rdf:about="&Fire;ExploitServer">
+        <rdfs:subClassOf rdf:resource="&Fire;MaliciousHost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#Host -->
+
+    <owl:Class rdf:about="&Fire;Host">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#IPAddress -->
+
+    <owl:Class rdf:about="&Fire;IPAddress"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#MaliciousHost -->
+
+    <owl:Class rdf:about="&Fire;MaliciousHost">
+        <rdfs:subClassOf rdf:resource="&Fire;Host"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#PhishingServer -->
+
+    <owl:Class rdf:about="&Fire;PhishingServer">
+        <rdfs:subClassOf rdf:resource="&Fire;MaliciousHost"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
