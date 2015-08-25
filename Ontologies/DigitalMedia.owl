@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DigitalMedia "http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:DigitalMedia="http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#belongsToFile -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;belongsToFile">
+        <rdfs:domain rdf:resource="&DigitalMedia;ByteRun"/>
+        <rdfs:range rdf:resource="&DigitalMedia;File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#belongsToPartition -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;belongsToPartition">
+        <rdfs:domain rdf:resource="&DigitalMedia;FileSystem"/>
+        <rdfs:range rdf:resource="&DigitalMedia;Partition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#containsFile -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;containsFile">
+        <rdfs:range rdf:resource="&DigitalMedia;File"/>
+        <rdfs:domain rdf:resource="&DigitalMedia;FileSystem"/>
+        <owl:inverseOf rdf:resource="&DigitalMedia;isContainedInFileSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;describes">
+        <rdfs:domain rdf:resource="&DigitalMedia;FiwalkReport"/>
+        <rdfs:range rdf:resource="&DigitalMedia;MediaDeviceImage"/>
+        <owl:inverseOf rdf:resource="&DigitalMedia;isDescribedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasByteRun -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;hasByteRun">
+        <rdfs:range rdf:resource="&DigitalMedia;ByteRun"/>
+        <rdfs:domain rdf:resource="&DigitalMedia;File"/>
+        <owl:inverseOf rdf:resource="&DigitalMedia;belongsToFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileSystem -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;hasFileSystem">
+        <rdfs:range rdf:resource="&DigitalMedia;FileSystem"/>
+        <rdfs:domain rdf:resource="&DigitalMedia;Partition"/>
+        <owl:inverseOf rdf:resource="&DigitalMedia;belongsToPartition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasMD5Resource -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;hasMD5Resource"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasPartition -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;hasPartition">
+        <rdfs:domain rdf:resource="&DigitalMedia;MediaDeviceImage"/>
+        <rdfs:range rdf:resource="&DigitalMedia;Partition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#isContainedInFileSystem -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;isContainedInFileSystem">
+        <rdfs:domain rdf:resource="&DigitalMedia;File"/>
+        <rdfs:range rdf:resource="&DigitalMedia;FileSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;isDescribedBy">
+        <rdfs:range rdf:resource="&DigitalMedia;FiwalkReport"/>
+        <rdfs:domain rdf:resource="&DigitalMedia;MediaDeviceImage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#isPartitionOf -->
+
+    <owl:ObjectProperty rdf:about="&DigitalMedia;isPartitionOf">
+        <rdfs:range rdf:resource="&DigitalMedia;MediaDeviceImage"/>
+        <rdfs:domain rdf:resource="&DigitalMedia;Partition"/>
+        <owl:inverseOf rdf:resource="&DigitalMedia;hasPartition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasBlockCount -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasBlockCount">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasBlockSize -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasBlockSize">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileAccessTime -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFileAccessTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileCreationTime -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFileCreationTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileModificationTime -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFileModificationTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileOffset -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFileOffset">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFileSystemOffset -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFileSystemOffset">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasFormat -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasFormat">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasImageOffset -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasImageOffset">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasMD5 -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasMD5">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasMD5Value -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasMD5Value"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasMetadataChangeTime -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasMetadataChangeTime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasPathName -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasPathName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasSize -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasSize">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#hasType -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;hasType">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#isAllocated -->
+
+    <owl:DatatypeProperty rdf:about="&DigitalMedia;isAllocated">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#ArchiveFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;ArchiveFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#AudioFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;AudioFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#BinaryContent -->
+
+    <owl:Class rdf:about="&DigitalMedia;BinaryContent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#ByteRun -->
+
+    <owl:Class rdf:about="&DigitalMedia;ByteRun">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;BinaryContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#DatabaseFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;DatabaseFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#DocumentFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;DocumentFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#EXT3FileSystem -->
+
+    <owl:Class rdf:about="&DigitalMedia;EXT3FileSystem">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;FileSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#ExecutableFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;ExecutableFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#FAT32FileSystem -->
+
+    <owl:Class rdf:about="&DigitalMedia;FAT32FileSystem">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;FileSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#File -->
+
+    <owl:Class rdf:about="&DigitalMedia;File">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;BinaryContent"/>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="&DigitalMedia;hasMD5Value"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#FileSystem -->
+
+    <owl:Class rdf:about="&DigitalMedia;FileSystem">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;BinaryContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#FiwalkReport -->
+
+    <owl:Class rdf:about="&DigitalMedia;FiwalkReport"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#ImageFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;ImageFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#MD5Resource -->
+
+    <owl:Class rdf:about="&DigitalMedia;MD5Resource"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#MediaDeviceImage -->
+
+    <owl:Class rdf:about="&DigitalMedia;MediaDeviceImage">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;BinaryContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#NTFSFileSystem -->
+
+    <owl:Class rdf:about="&DigitalMedia;NTFSFileSystem">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;FileSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#Partition -->
+
+    <owl:Class rdf:about="&DigitalMedia;Partition">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;BinaryContent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#VideoFile -->
+
+    <owl:Class rdf:about="&DigitalMedia;VideoFile">
+        <rdfs:subClassOf rdf:resource="&DigitalMedia;File"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#File1 -->
+
+    <owl:NamedIndividual rdf:about="&DigitalMedia;File1">
+        <rdf:type rdf:resource="&DigitalMedia;File"/>
+        <hasMD5Value>123</hasMD5Value>
+        <hasMD5Resource rdf:resource="&DigitalMedia;MD5Resource1"/>
+        <hasMD5Resource rdf:resource="&DigitalMedia;MD5Resource2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#File2 -->
+
+    <owl:NamedIndividual rdf:about="&DigitalMedia;File2">
+        <rdf:type rdf:resource="&DigitalMedia;File"/>
+        <hasMD5Value>123</hasMD5Value>
+        <hasMD5Resource rdf:resource="&DigitalMedia;MD5Resource1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#MD5Resource1 -->
+
+    <owl:NamedIndividual rdf:about="&DigitalMedia;MD5Resource1">
+        <rdf:type rdf:resource="&DigitalMedia;MD5Resource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/DigitalMedia.owl#MD5Resource2 -->
+
+    <owl:NamedIndividual rdf:about="&DigitalMedia;MD5Resource2">
+        <rdf:type rdf:resource="&DigitalMedia;MD5Resource"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
