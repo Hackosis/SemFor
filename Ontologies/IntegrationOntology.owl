@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl"
+     xmlns:IntegrationOntology="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#"
+     xmlns:WindowsXPFirewallLog="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Fire="http://people.dsv.su.se/~dossis/ontologies/Fire.owl#"
+     xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:PacketCapture="http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToFireHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToFireHost">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireHostToFWLogHost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToPcapIP -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToPcapIP">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFWLogHost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToWHOISIpAddr -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogHostToWHOISIpAddr">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFWLogHost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogPortToPcapPort -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FWLogPortToPcapPort">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapPortToFWLogPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireHostToFWLogHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireHostToFWLogHost"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireIPAddrToPcapIP -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireIPAddrToPcapIP">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFireIPAddr"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireIPAddrToWHOISIpAddr -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FireIPAddrToWHOISIpAddr">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFireIPAddr"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#HTTPContentToMediaFile -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#HTTPContentToMediaFile">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#MediaFileToHTTPContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#HTTPContentToVTFile -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#HTTPContentToVTFile">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToHTTPContent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#MediaFileToHTTPContent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#MediaFileToHTTPContent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#MediaFileToVTFile -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#MediaFileToVTFile">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToMediaFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFWLogHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFWLogHost"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFireIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToFireIPAddr"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToWHOISIpAddr -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToWHOISIpAddr"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapPortToFWLogPort -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapPortToFWLogPort"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToHTTPContent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToHTTPContent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToMediaFile -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#VTFileToMediaFile"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFWLogHost -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFWLogHost"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFireIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToFireIPAddr"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToPcapIP -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#WHOISIpAddrToPcapIP">
+        <owl:inverseOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#PcapIPToWHOISIpAddr"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileCreationEvent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileCreationEvent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileLastAccessEvent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileLastAccessEvent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileMetadataChangeEvent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileMetadataChangeEvent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileModificationEvent -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#hasFileModificationEvent"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalAfter -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalAfter"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalBefore -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalBefore"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalInside -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalInside"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalIsMetBy -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalIsMetBy"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalIsStartedBy -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalIsStartedBy"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalMeets -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalMeets"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalStarts -->
+
+    <owl:ObjectProperty rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#temporalStarts"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/Fire.owl#Host -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/Fire.owl#Host"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#Event -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileAccessEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileAccessEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileCreationEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileCreationEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileMetadataChangeEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileMetadataChangeEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileModificationEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileModificationEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#FileEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl#IPv4_Communication -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl#IPv4_Communication">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#FirewallEvent">
+        <rdfs:subClassOf rdf:resource="http://people.dsv.su.se/~dossis/ontologies/IntegrationOntology.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host -->
+
+    <owl:Class rdf:about="http://people.dsv.su.se/~dossis/ontologies/WindowsXPFirewallLog.owl#Host"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition -->
+
+    <owl:Class rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
