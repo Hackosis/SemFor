@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY http "http://www.w3.org/2011/http#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY content "http://www.w3.org/2011/content#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY PacketCapture "http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl#"
+     xml:base="http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl"
+     xmlns:content="http://www.w3.org/2011/content#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:http="http://www.w3.org/2011/http#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://people.dsv.su.se/~dossis/ontologies/PacketCapture.owl"/>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasApplicationLayerProtocol -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasApplicationLayerProtocol">
+        <rdfs:range rdf:resource="&PacketCapture;ApplicationLayerProtocol"/>
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasCommunication -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasCommunication">
+        <rdfs:range rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <rdfs:domain rdf:resource="&PacketCapture;PacketCaptureFile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasDestinationIP -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasDestinationIP">
+        <rdfs:range rdf:resource="&PacketCapture;IPAddress"/>
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasDestinationPort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasDestinationPort">
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <rdfs:range rdf:resource="&PacketCapture;Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasHTTPRequest -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasHTTPRequest">
+        <rdfs:domain rdf:resource="&PacketCapture;HTTP"/>
+        <rdfs:range rdf:resource="&http;Request"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasPacketHeader -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasPacketHeader">
+        <rdfs:domain rdf:resource="&PacketCapture;PacketCapturePacket"/>
+        <rdfs:range rdf:resource="&PacketCapture;PacketHeader"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasPacketPayload -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasPacketPayload">
+        <rdfs:domain rdf:resource="&PacketCapture;PacketCapturePacket"/>
+        <rdfs:range rdf:resource="&PacketCapture;PacketPayload"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasSourceIP -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasSourceIP">
+        <rdfs:range rdf:resource="&PacketCapture;IPAddress"/>
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasSourcePort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasSourcePort">
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <rdfs:range rdf:resource="&PacketCapture;Port"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasTCPCommunication -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasTCPCommunication">
+        <rdfs:domain rdf:resource="&PacketCapture;PacketCaptureFile"/>
+        <rdfs:range rdf:resource="&PacketCapture;TCPFlow"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasCommunication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasTCPDestinationPort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasTCPDestinationPort">
+        <rdfs:domain rdf:resource="&PacketCapture;TCPFlow"/>
+        <rdfs:range rdf:resource="&PacketCapture;TCPPort"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasDestinationPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasTCPSourcePort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasTCPSourcePort">
+        <rdfs:domain rdf:resource="&PacketCapture;TCPFlow"/>
+        <rdfs:range rdf:resource="&PacketCapture;TCPPort"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasSourcePort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasUDPCommunication -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasUDPCommunication">
+        <rdfs:domain rdf:resource="&PacketCapture;PacketCaptureFile"/>
+        <rdfs:range rdf:resource="&PacketCapture;UDPFlow"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasCommunication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasUDPDestinationPort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasUDPDestinationPort">
+        <rdfs:domain rdf:resource="&PacketCapture;UDPFlow"/>
+        <rdfs:range rdf:resource="&PacketCapture;UDPPort"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasDestinationPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasUDPSourcePort -->
+
+    <owl:ObjectProperty rdf:about="&PacketCapture;hasUDPSourcePort">
+        <rdfs:domain rdf:resource="&PacketCapture;UDPFlow"/>
+        <rdfs:range rdf:resource="&PacketCapture;UDPPort"/>
+        <rdfs:subPropertyOf rdf:resource="&PacketCapture;hasSourcePort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasContentMD5 -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasContentMD5"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasContentSHA1 -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasContentSHA1">
+        <rdfs:range rdf:resource="&xsd;hexBinary"/>
+        <rdfs:domain rdf:resource="&content;Content"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasEndTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasEndTimeStamp">
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasIPValue -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasIPValue">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasNumericalValue -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasNumericalValue">
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasStartTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasStartTimeStamp">
+        <rdfs:domain rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="&PacketCapture;hasTimeStamp">
+        <rdfs:domain rdf:resource="&PacketCapture;PacketHeader"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#ApplicationLayerProtocol -->
+
+    <owl:Class rdf:about="&PacketCapture;ApplicationLayerProtocol"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#DNS -->
+
+    <owl:Class rdf:about="&PacketCapture;DNS">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;ApplicationLayerProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#HTTP -->
+
+    <owl:Class rdf:about="&PacketCapture;HTTP">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;ApplicationLayerProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#IPAddress -->
+
+    <owl:Class rdf:about="&PacketCapture;IPAddress">
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PacketCapture;hasIPValue"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#IPv4_Communication -->
+
+    <owl:Class rdf:about="&PacketCapture;IPv4_Communication"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#PacketCaptureFile -->
+
+    <owl:Class rdf:about="&PacketCapture;PacketCaptureFile"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#PacketCapturePacket -->
+
+    <owl:Class rdf:about="&PacketCapture;PacketCapturePacket"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#PacketHeader -->
+
+    <owl:Class rdf:about="&PacketCapture;PacketHeader"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#PacketPayload -->
+
+    <owl:Class rdf:about="&PacketCapture;PacketPayload"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#Port -->
+
+    <owl:Class rdf:about="&PacketCapture;Port"/>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#TCPFlow -->
+
+    <owl:Class rdf:about="&PacketCapture;TCPFlow">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;IPv4_Communication"/>
+        <owl:disjointWith rdf:resource="&PacketCapture;UDPFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#TCPPort -->
+
+    <owl:Class rdf:about="&PacketCapture;TCPPort">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;Port"/>
+        <owl:disjointWith rdf:resource="&PacketCapture;UDPPort"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#UDPFlow -->
+
+    <owl:Class rdf:about="&PacketCapture;UDPFlow">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;IPv4_Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://people.dsv.su.se/~dossis/PacketCapture.owl#UDPPort -->
+
+    <owl:Class rdf:about="&PacketCapture;UDPPort">
+        <rdfs:subClassOf rdf:resource="&PacketCapture;Port"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
